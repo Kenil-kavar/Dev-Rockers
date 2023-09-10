@@ -1,7 +1,7 @@
 # AyurAI by Dev Rockers: Bridging Ancient Wisdom with Modern Technology for Holistic Healthcare
 ## To Run
-The Disease prediction model is traine din the classifier.ipynb file.
-The main code that takes symptoms as input and gives the corresponding remedy in the ourt put is written in test.oy file
+The Disease prediction model is trained in the classifier.ipynb file.
+The main code that takes symptoms as input and gives the corresponding remedy in the output is written in test.py file
 ## Problem Statement
 Modern healthcare neglects the profound holistic insights of Ayurveda, leading to delayed interventions and incomplete disease predictions, demanding an integrated approach that harmonizes ancient wisdom with contemporary technology for a healthier future.
 
