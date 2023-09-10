@@ -1,4 +1,5 @@
 import pandas as pd
+from transformers import pipeline, set_seed
 
 import pickle
 # Replace 'file_path.pkl' with the path to your pickle file
@@ -19,12 +20,16 @@ def predictDisease(symp_in):
 
     for sym in symp_in:
         dat[sym] = [1]
-
-    print(symptoms)
     
     frame = pd.DataFrame(dat)
     Q=model_rf.predict(frame)
-    print(Q[0])
+    disease = Q[0]
+
+    str = f"Ayurvedic herbs for {disease}"
+    generator = pipeline('text-generation', model='gpt2-medium')
+    set_seed(42)
+    result = generator("Hello, I'm a language model,", max_length=30, num_return_sequences=5)
+    print(result[0]['generated_text'])
 
     
     
